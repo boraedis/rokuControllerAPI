@@ -1,0 +1,12 @@
+[project]
+name = "rokuControllerAPI"
+version = "0.0.0"
+description = "API to enable roku controller over LAN"
+dependencies = [
+    "flask",
+    "ssdpy",
+    "requests"
+]
+
+[build-system]
+requires = []
