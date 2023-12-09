@@ -58,7 +58,7 @@ def volumeUp(amount):
     if not RokuIP:
         getRokuIP()
 
-    for i in range(amount):
+    for i in range(int(amount)):
         res = requests.post(RokuIP + 'keypress/VolumeUp')
     return {
         'statusCode': 200
@@ -70,20 +70,19 @@ def volumeDown(amount):
     if not RokuIP:
         getRokuIP()
 
-    for i in range(amount):
+    for i in range(int(amount)):
         res = requests.post(RokuIP + 'keypress/VolumeDown')
     return {
         'statusCode': 200
     }
 
 @app.route("/press/mute")
-def mute(amount):
+def mute():
     global RokuIP
     if not RokuIP:
         getRokuIP()
 
-    for i in range(amount):
-        res = requests.post(RokuIP + 'keypress/VolumeMute')
+    res = requests.post(RokuIP + 'keypress/VolumeMute')
     return {
         'statusCode': 200
     }
