@@ -9,4 +9,8 @@ dependencies = [
 ]
 
 [build-system]
-requires = []
+requires = [
+    "flask",
+    "ssdpy",
+    "requests",
+]
